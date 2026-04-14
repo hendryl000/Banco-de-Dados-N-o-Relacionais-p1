@@ -7,7 +7,7 @@ Entrega preparada com `Docker + MongoDB + mongosh`, usando um banco chamado `esc
 - `docker-compose.yml`: sobe o MongoDB em container.
 - `scripts/init.js`: cria o banco, collection e insere 5 alunos.
 - `scripts/queries.js`: executa todas as consultas solicitadas.
-- `evidencias/`: pasta para salvar prints da execução.
+- `resultados/`: pasta para salvar prints da execução.
 
 ## Como executar
 
@@ -32,7 +32,7 @@ docker exec mongo-escola mongosh /scripts/queries.js
 ### 4. Salvar a saída em arquivo texto
 
 ```powershell
-docker exec mongo-escola mongosh /scripts/queries.js > evidencias/saida-consultas.txt
+docker exec mongo-escola mongosh /scripts/queries.js > resultados/saida-consultas.txt
 ```
 
 ## Comandos utilizados
@@ -44,7 +44,7 @@ docker exec mongo-escola mongosh --eval "show dbs"
 docker exec mongo-escola mongosh --eval "use escola"
 docker exec mongo-escola mongosh --eval "db.alunos.find().pretty()"
 docker exec mongo-escola mongosh /scripts/queries.js
-docker exec mongo-escola mongosh /scripts/queries.js > evidencias/saida-consultas.txt
+docker exec mongo-escola mongosh /scripts/queries.js > resultados/saida-consultas.txt
 ```
 
 ## Consultas realizadas
@@ -62,9 +62,9 @@ docker exec mongo-escola mongosh /scripts/queries.js > evidencias/saida-consulta
 
 Salve os prints nesta pasta:
 
-- `evidencias/print-01-container.png`
-- `evidencias/print-02-todos-alunos.png`
-- `evidencias/print-03-consultas.png`
+- `resultados/print-01-container.png`
+- `resultados/print-02-todos-alunos.png`
+- `resultados/print-03-consultas.png`
 
 ## Observacao
 

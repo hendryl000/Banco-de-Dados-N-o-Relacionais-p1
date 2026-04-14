@@ -2,4 +2,4 @@ docker compose up -d
 docker ps --filter "name=mongo-escola"
 docker exec mongo-escola mongosh --quiet --eval "db.getSiblingDB('escola').alunos.countDocuments()"
 docker exec mongo-escola mongosh /scripts/queries.js
-docker exec mongo-escola mongosh /scripts/queries.js > evidencias/saida-consultas.txt
+docker exec mongo-escola mongosh /scripts/queries.js > resultados/saida-consultas.txt
