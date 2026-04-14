@@ -1,0 +1,16 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: mongo-escola
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: escola
+    volumes:
+      - mongo_escola_data:/data/db
+      - ./scripts:/scripts:ro
+      - ./scripts/init.js:/docker-entrypoint-initdb.d/01-init.js:ro
+
+volumes:
+  mongo_escola_data:
